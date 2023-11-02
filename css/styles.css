@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+/*=============== Variables ================*/
+:root{
+  /*====== Fonts ======*/
+  --heading-main: 'Lexend', sans-serif;
+  --paragraph-content: 'Outfit', sans-serif;
+  /*====== Colors ======*/
+  --primary-color: #B7161A;
+  --secondary-color: #F39204;
+  --tertiary-color: #67100A;
+  --quaternary-color: #F3E279;
+  --quinary-color: #CDA964;
+  --senary-color: #7ea900;
+  --grey-color: #cacaca;
+  --paragraph-color: #474444;
+  --white-color: #f2f2f2;
+}
+
+/**
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.box{
+  background-color: var(--primary-color);
+  height: 25rem;
+  width: 25rem;
+}
+
+/*=============== Styles Globals ================*/
+a{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: var(--paragraph-content);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
+h1, h2, h3{
+  font-family: : var(--headings);
+  font-weight: 700;
+  line-height: 1;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+p{
+  color: var(--paragraph-color);
+  font-family: var(--paragraphs);
+  font-size: 1.5rem;
+}
+
+img{
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/*=============== Styles Header ================*/
+.header__grid{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px){
+  .header__grid{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.header__logo{
+  margin-bottom: 3rem;
+  width: 30rem;
+}
+
+@media only screen and (min-width: 768px){
+  .header__logo{
+    margin-bottom: 0;
+  }
+}
+
+.navigation{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px){
+  .navigation{
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.navigation__link{
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.navigation__link:last-of-type{
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px){
+  .navigation__link{
+    margin-bottom: 0;
+  }
+}
+
+.navigation__link:hover{
+  color: var(--primary-color);
+}
+
+/*=============== Styles Blocks ================*/
+@media only screen and (min-width: 768px){
+  .blocks__grid{
+    align-content: center;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+.block img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.block{
+  display: grid;
+  height: 30rem;
+  width: 100%;
+}
+
+.block__content{
+  align-content: center;
+  /* display: grid; */
+  justify-content: center;
+  padding: 6rem;
+}
+
+.block__heading{
+  color: var(--white-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.block__text{
+  color: var(--white-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.block:nth-child(1){
+  background-color: var(--primary-color);
+}
+
+.block:nth-child(3){
+  background-color: var(--tertiary-color);
+  grid-column: 2 / 3;
+}
+
+/*=============== Styles About ================*/
+.about_us{
+  margin-top: 5rem;
+}
+
+.about__heading{
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  .about__grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+  }
+}
+
+.about__block svg{
+  color: var(--secondary-color);
+  height: 5rem;
+  width: 5rem;
+}
+
+.about__block{
+  color: var(--tertiary-color);
+  text-align: center;
+}
