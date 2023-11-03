@@ -13,6 +13,7 @@
   --senary-color: #7ea900;
   --grey-color: #cacaca;
   --paragraph-color: #474444;
+  --white-medium: #F8FBFB;
   --white-color: #f2f2f2;
 }
 
@@ -211,5 +212,80 @@ img{
 
 .about__block{
   color: var(--tertiary-color);
+  text-align: center;
+}
+
+/*=============== Styles Lessons ================*/
+.lessons{
+  background-color: var(--white-color);
+  padding: 5rem 0;
+}
+
+.lessons__heading{
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  .lessons__grid{
+    align-items: start;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .lessons__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.lesson{
+  background-color: var(--white-medium);
+  border: 1px solid var(--grey-color);
+}
+
+.lesson__meta{
+  align-items: center;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.lesson__date{
+  color: var(--white-medium);
+  font-size: 1.3rem;
+}
+
+.lesson__price{
+  background-color: var(--quinary-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: .5rem;
+}
+
+.lesson__content{
+  padding: 2rem;
+}
+
+.lesson__name{
+  color: var(--tertiary-color);
+  min-height: 4rem;
+  text-align: center;
+}
+
+.lesson__description{
+  text-align: center;
+}
+
+.lesson__btn{
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  display: block;
+  font-weight: 600;
+  padding: .5rem;
   text-align: center;
 }
