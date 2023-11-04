@@ -159,9 +159,9 @@ img{
 
 .block__content{
   align-content: center;
-  /* display: grid; */
+  display: grid;
   justify-content: center;
-  padding: 6rem;
+  padding: 4rem;
 }
 
 .block__heading{
@@ -291,42 +291,88 @@ img{
 }
 
 /*=============== Styles School Hero ================*/
-.school{
-  height: 35rem;
-  position: relative;
+.hero__container{
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 3rem 0;
 }
 
-.school__heading{
-  color: var(--white-color);
+.hero__image{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  height: 30rem;
 }
 
-.school__text{
-  color: var(--white-medium);
-  margin: 5rem;
+.hero__overlay{
+  background: linear-gradient(45deg, rgb(0 0 0 / .6) 15%, rgb(0 0 0 / 0) 100%);
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+@media only screen and (min-width: 768px){
+  .hero__overlay{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .hero__text{
+    color: var(--white-medium);
+    margin: 6rem 0;
+    padding: 0 6rem;
+    text-align: center;
+  }
+}
+
+.hero__overlay{
+  padding: 0;
   text-align: center;
 }
 
-.school__btn{
-  background-color: var(--secondary-color);
-  color: var(--white-color);
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-.school__image{
-  display: block;
+.hero__image img{
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-.school__overlay{
-  background-color: rgb(0 0 0 / .6);
-  height: 35rem;
-  padding: 5rem 0;
-  position: absolute;
+.hero__heading{
+  color: var(--white-color);
   text-align: center;
-  z-index: 0;
-  width: 100%;
+}
+
+.hero__text{
+  color: var(--white-medium);
+  margin: 5rem 0;
+  padding: 0 8rem;
+}
+
+.hero__btn{
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: .7rem;
+}
+
+/*=============== Styles Footer ================*/
+.footer{
+  border-bottom: .5rem solid var(--primary-color);
+  padding: 3rem 0;
+}
+
+@media only screen and (min-width: 768px){
+  .footer__grid{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__copyright{
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  .footer__copyright{
+    margin: 0;
+  }
 }
